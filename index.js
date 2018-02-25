@@ -70,17 +70,17 @@ class Delivery {
   }
   meal() {
     const mealArr = store.meals
-      .filter((meal) => {
+      .find((meal) => {
         return meal.id === this.mealId;
       });
-    return mealArr[0];
+    return mealArr;
   }
   customer() {
     const customerArr = store.customers
-      .filter((customer) => {
+      .find((customer) => {
         return customer.id === this.customerId
       });
-    return customerArr[0];
+    return customerArr;
   }
 }
 
